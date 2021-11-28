@@ -13,7 +13,7 @@ int main(int argc, char **argv) {
     for (int i = 1; i < argc; i++) {
         act = malloc(sizeof(lista));
         act->linia = malloc((strlen(argv[i]) + 1) * sizeof(char));
-        act->linia = argv[i];
+        act->linia = strdup(argv[i]);
         act->next=NULL;
         struct item *next = lista;
         if(lista==NULL)
